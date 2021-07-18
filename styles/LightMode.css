@@ -1,0 +1,113 @@
+.body {
+  background-color: #e8f2fc;
+}
+
+.preview-pane {
+  width: auto;
+  min-width: 350px;
+  height: 400px;
+  padding-top: 7px;
+  margin-left: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  color: #0054a6;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
+}
+
+.properties-pane {
+  width: auto;
+  min-width: 350px;
+  height: 250px;
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  color: #0054a6;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
+}
+
+.information-pane {
+  width: auto;
+  min-width: 700px;
+  height: 70px;
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  text-align: left;
+  background-color: mediumseagreen;
+  border-radius: 10px;
+  text-decoration-color: #0054a6;
+  box-shadow: 0px 0px 5px 1px mediumseagreen;
+}
+
+.hr {
+  width: 90%;
+  color: gray;
+}
+
+p {
+  line-height: 10px;
+}
+
+.blocklyZoom > image,
+.blocklyZoom > svg > image {
+  filter: sepia(1) hue-rotate(169deg) saturate(3) brightness(0.6);
+  opacity: 1;
+}
+
+.blocklyTrash {
+  filter: sepia(1) hue-rotate(169deg) saturate(3) brightness(0.6);
+  opacity: 1;
+}
+
+.blocklyFlyoutBackground {
+  fill: white;
+  stroke: rgb(223, 220, 220);
+}
+
+.injectionDiv {
+  border-radius: 1rem;
+}
+
+.blocklyMainBackground {
+  stroke-width: 1;
+  stroke: #ffffff;
+}
+
+.zelos-renderer.classic-theme .blocklyText,
+.zelos-renderer.classic-theme .blocklyFlyoutLabelText {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 480;
+  font-size: 22px;
+}
+
+.blocklyToolboxDiv {
+  padding-top: 20px;
+  background-color: #0054a6;
+  height: 96.5%;
+}
+
+.blocklyTreeLabel {
+  color:white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/*increase height of the category
+/* .blocklyTreeRow{
+  height: 30px;
+} */
+
+table {
+  width:100%;
+}
