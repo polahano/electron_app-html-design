@@ -1,6 +1,6 @@
 
 Blockly.HSV_SATURATION = 0.8// 0 (inclusive) to 1 (exclusive), defaulting to 0.45
-Blockly.HSV_VALUE = 0.7// 0 (inclusive) to 1 (exclusive), defaulting to 0.65
+Blockly.HSV_VALUE = 0.8// 0 (inclusive) to 1 (exclusive), defaulting to 0.65
 
 
 
@@ -14,19 +14,28 @@ var workspace = Blockly.inject(blocklyDiv, {
     'metricsManager': ContinuousMetrics,
   },
   toolbox: toolbox,
-  media: 'https://blockly-demo.appspot.com/static/media/',
+  media: './node_modules/blockly/media/',
   scrollbars: true,
-  trashcan: true,
+ // trashcan: true,
   sounds: true,
   oneBasedIndex: true,
   zoom: {
     controls: true,
     wheel: false,
     startScale: 0.7,
-    maxScale: 3,
-    minScale: 0.3,
+    maxScale: 2,
+    minScale: 0.4,
     scaleSpeed: 1.2
   },
   renderer: "zelos",
 });
+
+/**
+ * @override
+ */
+ Blockly.VerticalFlyout.prototype.getFlyoutScale = function() {
+  return 0.7;
+};
+
+
 

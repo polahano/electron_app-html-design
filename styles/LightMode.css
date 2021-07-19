@@ -59,8 +59,8 @@ p {
   line-height: 10px;
 }
 
-.blocklyZoom > image,
-.blocklyZoom > svg > image {
+.blocklyZoom>image,
+.blocklyZoom>svg>image {
   filter: sepia(1) hue-rotate(169deg) saturate(3) brightness(0.6);
   opacity: 1;
 }
@@ -92,22 +92,42 @@ p {
 }
 
 .blocklyToolboxDiv {
-  padding-top: 20px;
+  padding-top: 15px;
   background-color: #0054a6;
   height: 96.5%;
 }
 
 .blocklyTreeLabel {
-  color:white;
+  color: white;
   font-size: 10px;
   font-weight: bold;
 }
 
-/*increase height of the category
-/* .blocklyTreeRow{
-  height: 30px;
-} */
-
 table {
-  width:100%;
+  width: 100%;
+}
+
+/* Adds padding around the group of categories and separators. */
+.blocklyToolboxContents {
+  padding: 0.5em;
+}
+
+/* Adds space between the categories, rounds the corners and adds space around the label. */
+.blocklyTreeRow {
+  padding: 3px;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+  height: initial;
+}
+
+/* Changes color of the icon to white. */
+.customIcon {
+  color: white;
+}
+
+/* Stacks the icon on top of the label. */
+.blocklyTreeRowContentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
