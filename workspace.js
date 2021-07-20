@@ -16,7 +16,7 @@ var workspace = Blockly.inject(blocklyDiv, {
   toolbox: toolbox,
   media: './node_modules/blockly/media/',
   scrollbars: true,
- // trashcan: true,
+  trashcan: true,
   sounds: true,
   oneBasedIndex: true,
   zoom: {
