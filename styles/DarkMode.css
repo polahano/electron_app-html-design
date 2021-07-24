@@ -1,37 +1,158 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : May 23, 2021, 12:08:55 AM
-    Author     : Pola
-*/
-.root {
-    -fx-background-color: brown;
+.body {
+  background-color: #1b2440;
 }
 
-.vbox {
-    -fx-background-radius: 50px;
-    -fx-border-radius: 50px;
-    -fx-background-color: violet;
-    -fx-width: 708px;
-    -fx-height: 2142px;
-    -fx-z-index: 5;
+.preview-pane {
+  width: 350px;
+  min-width: 300px;
+  height: 330px;
+  padding-top: 7px;
+  /* margin-left: 20px; */
+  text-align: center;
+  background-color: #2a3556;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  /* box-shadow: 0px 0px 5px 1px rgb(255, 255, 255); */
+}
+
+.properties-pane {
+  width: 350px;
+  min-width: 300px;
+  height: 250px;
+  padding-top: 7px;
+  margin-top: 2px;
+  /* margin-left: 20px; */
+  text-align: center;
+  background-color: #2a3556;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  /* box-shadow: 0px 0px 5px 1px rgb(255, 255, 255); */
+}
+
+.information-pane {
+  width: auto;
+  min-width: 700px;
+  height: 65px;
+  margin-top: 2px;
+  padding-left: 15px;
+  padding-top: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  text-align: left;
+  background-color: mediumseagreen;
+  border-radius: 0.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  /* box-shadow: 0px 0px 5px 1px mediumseagreen; */
+}
+
+.hr {
+  width: 90%;
+  color: rgb(160, 160, 160);
+}
+
+p {
+  line-height: 5px;
+}
+
+.blocklyZoom>image,
+.blocklyZoom>svg>image, .blocklyTrash {
+  filter: brightness(0) invert(1);
+  opacity: 1;
 }
 
 
 
-.button {
-    -fx-background-color: transparent;
-    -fx-background-radius: 50px;
-    -fx-border-radius: 50px
+.blocklyFlyoutBackground {
+  fill: #2a3556;
+  stroke: #404e7a;
 }
 
-.anchor-pane {
-    -fx-background-color: aqua;
-    -fx-background-radius: 50px;
-    -fx-border-radius: 50px
+.injectionDiv {
+  border-radius: 0.5rem;
 }
 
+.blocklyMainBackground {
+  stroke-width: 1;
+  stroke: #2a3556;
+}
+
+.zelos-renderer.classic-theme .blocklyText,
+.zelos-renderer.classic-theme .blocklyFlyoutLabelText {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-weight: 100; */
+  font-size: 22px;
+  fill: white;
+}
+
+.blocklyToolboxDiv {
+  padding-top: 15px;
+  background-color: #0e162c;
+  height: 96.5%;
+}
+
+.blocklyTreeLabel {
+  /*display: none;  if we need no text to appear*/
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+table {
+  width: 100%;
+
+  /* border-spacing: 0px; */
+}
+
+/* Adds padding around the group of categories and separators. */
+.blocklyToolboxContents {
+  padding: 1em;
+}
+
+/* Adds space between the categories, rounds the corners and adds space around the label. */
+.blocklyTreeRow {
+  /* height: 30px;
+  width: 30px; // when using icons without text
+  display: inline-block; */
+filter: saturate(0.5);
+  padding: 3px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px rgb(255, 255, 255);
+}
+
+/* Changes color of the icon to white. */
+.customIcon {
+  color: white;
+}
+
+/* Stacks the icon on top of the label. */
+.blocklyTreeRowContentContainer {
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;
+  padding-top: 4px;
+  padding-left: 2px;
+
+}
+
+
+.mdi {
+  font-size: 20px;
+}
+
+.blocklySvg{
+  background-color: #2a3556;
+}
+
+.blocklyFlyoutLabelText{
+  color: white;
+}
 

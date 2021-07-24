@@ -1,11 +1,16 @@
-Blockly.Extensions.register('my_button_extension', function () {
-    this.getField('MY_ICON_BUTTON').clickHandler_ = (() => {
-      // var fileSelector = document.createElement('input');
-      // fileSelector.setAttribute('type', 'file');
-      // fileSelector.click();
-      /*var input = document.getElementById('testInput');
-      input.click();*/
-      var output = document.getElementById('testOutput');
-      output.click();
-      })
-    });
+Blockly.Extensions.register('file_button', function () {
+  this.getField('file_browse').clickHandler_ = (() => {
+    // var fileSelector = document.createElement('input');
+    // fileSelector.setAttribute('type', 'file'); // another approach to include a file selector, too.
+    // fileSelector.click();
+    var input = document.getElementById('inputImage');
+    input.click();
+  })
+});
+
+Blockly.Extensions.register('folder_button', function () {
+  this.getField('folder_browse').clickHandler_ = (() => {
+    var output = document.getElementById('outputDirectory');
+    output.click();
+  })
+});

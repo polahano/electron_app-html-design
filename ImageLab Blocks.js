@@ -1,5 +1,3 @@
-const { dialog } = require('electron')
-
 
 Blockly.defineBlocksWithJsonArray([
   //Basic
@@ -33,36 +31,53 @@ Blockly.defineBlocksWithJsonArray([
     "helpUrl": ""
   },
   {
-    "type": "browse_block",
-    "message0": "Browse %1",
+    "type": "browse_file",
+    "message0": " %1",
     "args0": [
       {
-        "name": "MY_ICON_BUTTON",
+        "name": "file_browse",
         "type": "field_image",
-        "src": "https://img.icons8.com/plasticine/2x/browse-folder.png",
-        "width": 20,
-        "height": 20,
+        "src": "./assets/icons for blocks/image-plus.png",
+        "width": 40,
+        "height": 40,
         "alt": "*",
         "flipRtl": false
       }
     ],
-    "output": "browse_block",
+    "output": "browse_file",
     "colour": 160,
-    "tooltip": "",
+    "tooltip": "Choose an image",
     "helpUrl": "",
-    "extensions": ["my_button_extension"]
+    "extensions": ["file_button"]
+  },
+  {
+    "type": "browse_folder",
+    "message0": " %1",
+    "args0": [
+      {
+        "name": "folder_browse",
+        "type": "field_image",
+        "src": "./assets/icons for blocks/folder-plus.png",
+        "width": 40,
+        "height": 40,
+        "alt": "*",
+        "flipRtl": false
+      }
+    ],
+    "output": "browse_folder",
+    "colour": 160,
+    "tooltip": "Choose output folder",
+    "helpUrl": "",
+    "extensions": ["folder_button"]
   },
   {
     "type": "basic_readimage",
-    "message0": "Read image from %1",
+    "message0": "Read image %1",
     "args0": [
       {
         "type": "input_value",
         "name": "imageURL",
-        "check": [
-          "String",
-          "browse_block"
-        ]
+        "check": "browse_file"
       }
     ],
     "nextStatement": null,
@@ -77,10 +92,7 @@ Blockly.defineBlocksWithJsonArray([
       {
         "type": "input_value",
         "name": "destinationURL",
-        "check": [
-          "String",
-          "browse_block"
-        ]
+        "check": "browse_folder"
       }
     ],
     "previousStatement": null,

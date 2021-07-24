@@ -1,7 +1,4 @@
 
-Blockly.HSV_SATURATION = 0.8// 0 (inclusive) to 1 (exclusive), defaulting to 0.45
-Blockly.HSV_VALUE = 0.8// 0 (inclusive) to 1 (exclusive), defaulting to 0.65
-
 
 
 var blocklyDiv = document.getElementById("blocklyDiv");
@@ -22,7 +19,7 @@ var workspace = Blockly.inject(blocklyDiv, {
   zoom: {
     controls: true,
     wheel: false,
-    startScale: 0.7,
+    startScale: 0.6,
     maxScale: 2,
     minScale: 0.4,
     scaleSpeed: 1.2
@@ -30,11 +27,15 @@ var workspace = Blockly.inject(blocklyDiv, {
   renderer: "zelos",
 });
 
+// enable searching on workspace by using ctrl +f
+const workspaceSearch = new WorkspaceSearch(workspace);
+workspaceSearch.init();
+
 /**
  * @override
  */
- Blockly.VerticalFlyout.prototype.getFlyoutScale = function() {
-  return 0.7;
+Blockly.VerticalFlyout.prototype.getFlyoutScale = function () {
+  return 0.6;
 };
 
 

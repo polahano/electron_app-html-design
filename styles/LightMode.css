@@ -3,72 +3,72 @@
 }
 
 .preview-pane {
-  width: auto;
-  min-width: 350px;
-  height: 400px;
+  width: 350px;
+  min-width: 300px;
+  height: 330px;
   padding-top: 7px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   text-align: center;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 0.5rem;
   color: #0054a6;
-  font-size: 20px;
+  font-size: 15px;
   font-family: sans-serif;
   font-weight: bold;
-  box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
+  /* box-shadow: 0px 0px 5px 1px rgb(255, 255, 255); */
 }
 
 .properties-pane {
-  width: auto;
-  min-width: 350px;
+  width: 350px;
+  min-width: 300px;
   height: 250px;
-  margin-top: 20px;
-  margin-left: 20px;
+  padding-top: 7px;
+  margin-top: 2px;
+  /* margin-left: 20px; */
   text-align: center;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 0.5rem;
   color: #0054a6;
-  font-size: 20px;
+  font-size: 15px;
   font-family: sans-serif;
   font-weight: bold;
-  box-shadow: 0px 0px 5px 1px rgb(255, 255, 255);
+  /* box-shadow: 0px 0px 5px 1px rgb(255, 255, 255); */
 }
 
 .information-pane {
   width: auto;
   min-width: 700px;
-  height: 70px;
-  margin-top: 20px;
+  height: 65px;
+  margin-top: 2px;
   padding-left: 15px;
   padding-top: 3px;
   padding-right: 3px;
   padding-bottom: 3px;
   text-align: left;
   background-color: mediumseagreen;
-  border-radius: 10px;
-  text-decoration-color: #0054a6;
-  box-shadow: 0px 0px 5px 1px mediumseagreen;
+  border-radius: 0.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: white;
+  /* box-shadow: 0px 0px 5px 1px mediumseagreen; */
 }
 
 .hr {
   width: 90%;
-  color: gray;
+  color: rgb(160, 160, 160);
 }
 
 p {
-  line-height: 10px;
+  line-height: 5px;
 }
 
 .blocklyZoom>image,
-.blocklyZoom>svg>image {
+.blocklyZoom>svg>image, .blocklyTrash {
   filter: sepia(1) hue-rotate(169deg) saturate(3) brightness(0.6);
   opacity: 1;
 }
 
-.blocklyTrash {
-  filter: sepia(1) hue-rotate(169deg) saturate(3) brightness(0.6);
-  opacity: 1;
-}
+
 
 .blocklyFlyoutBackground {
   fill: white;
@@ -76,7 +76,7 @@ p {
 }
 
 .injectionDiv {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .blocklyMainBackground {
@@ -87,7 +87,7 @@ p {
 .zelos-renderer.classic-theme .blocklyText,
 .zelos-renderer.classic-theme .blocklyFlyoutLabelText {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 480;
+  /* font-weight: 100; */
   font-size: 22px;
 }
 
@@ -106,6 +106,8 @@ p {
 
 table {
   width: 100%;
+
+  /* border-spacing: 0px; */
 }
 
 /* Adds padding around the group of categories and separators. */
@@ -143,3 +145,4 @@ table {
 .mdi {
   font-size: 20px;
 }
+
