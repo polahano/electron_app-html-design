@@ -25,6 +25,7 @@ class CustomCategory extends Blockly.ToolboxCategory {
    */
   addColourBorder_() {
     this.rowDiv_.style.backgroundColor = '#035fbb';
+    // #1f2b4b for darkmode
   }
 
   /**
@@ -44,6 +45,7 @@ class CustomCategory extends Blockly.ToolboxCategory {
     } else {
       // Set the background back to the original colour.
       this.rowDiv_.style.backgroundColor = '#035fbb';
+      //  #1f2b4b for darkmode
       // Set the text back to white.
       labelDom.style.color = 'white';
       this.iconDom_.style.color = 'white';
