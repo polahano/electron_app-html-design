@@ -63,7 +63,8 @@ p {
 }
 
 .blocklyZoom>image,
-.blocklyZoom>svg>image, .blocklyTrash {
+.blocklyZoom>svg>image,
+.blocklyTrash {
   filter: brightness(0) invert(1);
   opacity: 1;
 }
@@ -121,7 +122,6 @@ table {
   /* height: 30px;
   width: 30px; // when using icons without text
   display: inline-block; */
-filter: saturate(0.5);
   padding: 3px;
   margin-bottom: 12px;
   border-radius: 10px;
@@ -143,16 +143,14 @@ filter: saturate(0.5);
 
 }
 
-
-.mdi {
-  font-size: 20px;
-}
-
-.blocklySvg{
+.blocklySvg {
   background-color: #2a3556;
 }
 
-.blocklyFlyoutLabelText{
+.blocklyFlyoutLabelText {
   color: white;
 }
 
+.mdi-file-plus-outline {
+  color: white;
+}

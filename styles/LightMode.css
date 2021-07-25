@@ -1,5 +1,26 @@
+/*:root {
+  --primary-color: white;
+  --secondary-color: #0054a6;
+  --toolbox-bg: #0054a6;
+  --bg-color: #e8f2fc;
+  --icon-filter: sepia(1) hue-rotate(169deg) saturate(3) brightness(0.6);
+  --thin-lines-color: rgb(160, 160, 160);
+    --label-color: white;
+}*/
+
+:root {
+  --primary-color: #2a3556;
+  --secondary-color: white;
+  --toolbox-bg: #0e162c;
+  --bg-color: #1b2440;
+  --icon-filter: brightness(0) invert(1);
+  --thin-lines-color: #313f69;
+  --label-color: white;
+}
+
+
 .body {
-  background-color: #e8f2fc;
+  background-color: var(--bg-color);
 }
 
 .preview-pane {
@@ -9,9 +30,9 @@
   padding-top: 7px;
   /* margin-left: 20px; */
   text-align: center;
-  background-color: white;
+  background-color: var(--primary-color);
   border-radius: 0.5rem;
-  color: #0054a6;
+  color: var(--secondary-color);
   font-size: 15px;
   font-family: sans-serif;
   font-weight: bold;
@@ -26,9 +47,9 @@
   margin-top: 2px;
   /* margin-left: 20px; */
   text-align: center;
-  background-color: white;
+  background-color: var(--primary-color);
   border-radius: 0.5rem;
-  color: #0054a6;
+  color: var(--secondary-color);
   font-size: 15px;
   font-family: sans-serif;
   font-weight: bold;
@@ -49,13 +70,13 @@
   border-radius: 0.5rem;
   font-family: sans-serif;
   font-weight: bold;
-  color: white;
+  color: var(--primary-color);
   /* box-shadow: 0px 0px 5px 1px mediumseagreen; */
 }
 
 .hr {
   width: 90%;
-  color: rgb(160, 160, 160);
+  color: var(--thin-lines-color);
 }
 
 p {
@@ -63,16 +84,17 @@ p {
 }
 
 .blocklyZoom>image,
-.blocklyZoom>svg>image, .blocklyTrash {
-  filter: sepia(1) hue-rotate(169deg) saturate(3) brightness(0.6);
+.blocklyZoom>svg>image,
+.blocklyTrash {
+  filter: var(--icon-filter);
   opacity: 1;
 }
 
 
 
 .blocklyFlyoutBackground {
-  fill: white;
-  stroke: rgb(223, 220, 220);
+  fill: var(--primary-color);
+  stroke: var(--thin-lines-color);
 }
 
 .injectionDiv {
@@ -81,7 +103,7 @@ p {
 
 .blocklyMainBackground {
   stroke-width: 1;
-  stroke: #ffffff;
+  stroke: var(--primary-color);
 }
 
 .zelos-renderer.classic-theme .blocklyText,
@@ -89,17 +111,18 @@ p {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   /* font-weight: 100; */
   font-size: 22px;
+  fill: var(--secondary-color);
 }
 
 .blocklyToolboxDiv {
   padding-top: 15px;
-  background-color: #0054a6;
+  background-color: var(--toolbox-bg);
   height: 96.5%;
 }
 
 .blocklyTreeLabel {
   /*display: none;  if we need no text to appear*/
-  color: white;
+  color: var(--label-color);
   font-size: 10px;
   font-weight: bold;
 }
@@ -123,12 +146,12 @@ table {
   padding: 3px;
   margin-bottom: 12px;
   border-radius: 10px;
-  box-shadow: 0px 0px 3px rgb(255, 255, 255);
+  box-shadow: 0px 0px 3px var(--primary-color);
 }
 
-/* Changes color of the icon to white. */
+/* Changes color of the icon to var(--primary-color). */
 .customIcon {
-  color: white;
+  color: var(--label-color);
 }
 
 /* Stacks the icon on top of the label. */
@@ -141,8 +164,14 @@ table {
 
 }
 
+.blocklySvg {
+  background-color: var(--primary-color);
+}
 
-.mdi {
-  font-size: 20px;
+.mdi-file-plus-outline , .mdi-folder-open-outline, .mdi-theme-light-dark {
+  color: var(--secondary-color);
+  margin-left: 1%;
+  font-size: 30px;
+  vertical-align: super;
 }
 

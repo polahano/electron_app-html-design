@@ -24,7 +24,11 @@ class CustomCategory extends Blockly.ToolboxCategory {
    * @override
    */
   addColourBorder_() {
-    this.rowDiv_.style.backgroundColor = '#035fbb';
+    if (document.getElementsByTagName('body').backgroundColor == '#e8f2fc') {
+      this.rowDiv_.style.backgroundColor = '#035fbb';
+    } else {
+      this.rowDiv_.style.backgroundColor = '#1f2b4b';
+    }
     // #1f2b4b for darkmode
   }
 
@@ -44,8 +48,12 @@ class CustomCategory extends Blockly.ToolboxCategory {
       this.iconDom_.style.color = this.colour_;
     } else {
       // Set the background back to the original colour.
-      this.rowDiv_.style.backgroundColor = '#035fbb';
-      //  #1f2b4b for darkmode
+
+      if (document.getElementsByTagName('body').backgroundColor == '#e8f2fc') {
+        this.rowDiv_.style.backgroundColor = '#035fbb';
+      } else {
+        this.rowDiv_.style.backgroundColor = '#1f2b4b';
+      }
       // Set the text back to white.
       labelDom.style.color = 'white';
       this.iconDom_.style.color = 'white';

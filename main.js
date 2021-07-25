@@ -15,9 +15,10 @@ app.on("ready", () => {
     },
     height: 800,
     width: 1600,
-    minHeight: 700,
-    roundedCorners: true,
+    minWidth: 1080,
+    minHeight:700,
     show: false,
+    icon: __dirname + '/assets/logos/Image Lab.png',
   });
   splash = new BrowserWindow({
     width: 600,
