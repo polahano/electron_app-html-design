@@ -16,10 +16,11 @@ app.on("ready", () => {
     height: 800,
     width: 1600,
     minWidth: 1100,
-    minHeight:800,
+    minHeight: 800,
     show: false,
     icon: __dirname + '/assets/logos/Image Lab.png',
   });
+
   splash = new BrowserWindow({
     width: 600,
     height: 400,
@@ -31,10 +32,10 @@ app.on("ready", () => {
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   mainWindow.once("ready-to-show", () => {
-    setTimeout(function(){      
-        splash.destroy();
-        mainWindow.show();
-    }, 4000);
+    setTimeout(function () {
+      splash.destroy();
+      mainWindow.show();
+    }, 3000);
   });
 
   mainWindow.on("closed", function () {

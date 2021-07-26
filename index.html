@@ -6,39 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Lab</title>
-
+  <!-- blockly package -->
   <script src="./node_modules/blockly/blockly_compressed.js"></script>
   <script src="./node_modules/blockly/blocks_compressed.js"></script>
   <script src="./node_modules/blockly/msg/js/en.js"></script>
+  <!-- plugins used -->
   <script src="./node_modules/@blockly/continuous-toolbox/dist/index.js"></script>
   <script src="./node_modules/@blockly/field-slider/dist/index.js"></script>
   <script src="./node_modules/@blockly/plugin-workspace-search/dist/index.js"></script>
-  <script src="./Category style.js"></script>
+  <!-- responsible for changing colors of selected category -->
+  <script src="./category-selection-style.js"></script>
+  <!-- color palette -->
   <script>
     Blockly.HSV_SATURATION = 0.8// 0 (inclusive) to 1 (exclusive), defaulting to 0.45
     Blockly.HSV_VALUE = 0.8// 0 (inclusive) to 1 (exclusive), defaulting to 0.65
   </script>
-
+  <!-- icons library and styles of html elements-->
   <link rel="stylesheet" href="./node_modules/@mdi/font/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 
+
 <body class="body">
-
-
   <table>
     <tr>
       <td>
-        <img class="logo" src="./assets/logos/Image Lab.png" style="height:40px; vertical-align:sub;">
-        <img class="logo" src="./assets/logos/Image Lab 1.png" style=" height:30px;">
+        <img class="logo" src="./assets/logos/Image Lab icon.png" style="height:40px; vertical-align:sub;">
+        <img class="logo" src="./assets/logos/Image Lab word.png" style=" height:30px;">
         <span class="mdi mdi-information" style="font-size:20px; vertical-align:top; color: #bb1010;"></span>
         <span class="mdi mdi-file-plus-outline"></span>
         <span class="mdi mdi-folder-open-outline"></span>
-        <!-- <span class="mdi mdi-theme-light-dark"></span> -->
         <span class="toggle"></span>
         <span class="wave"></span>
-
-
       </td>
       <!-- <td style="width: 450px;">
         <span class="mdi mdi-play-circle-outline"
@@ -126,9 +125,6 @@
         </div>
       </td>
       <td style="vertical-align: top;">
-
-
-
         <div class="preview-pane" style="padding-top: 2px;">
           <table>
             <tr>
@@ -140,28 +136,22 @@
               </td>
             </tr>
           </table>
-
-
           <hr class="hr" style="margin-top: 0px;">
         </div>
-
         <div class="properties-pane">
-          Properties
+          <p>Preview</p>
           <hr class="hr">
-
         </div>
       </td>
     </tr>
   </table>
 
-
-
-  <script src='ImageLab Blocks.js'></script>
-  <script src="blocks click functions.js"></script>
+  <script src='imagelab-blocks.js'></script>
+  <script src="browse-blocks-functions.js"></script>
   <script src="workspace.js"></script>
-  <script src="toggle.js"></script>
+  <script src="themes-toggle.js"></script>
 
-
+  <!-- file selector for browse blocks -->
   <input type="file" id="inputImage" name="avatar" accept=".jpg , .png" style="display:none">
   <input style="display:none" id="outputDirectory" type="file" webkitdirectory directory multiple />
 
