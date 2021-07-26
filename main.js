@@ -15,8 +15,8 @@ app.on("ready", () => {
     },
     height: 800,
     width: 1600,
-    minWidth: 1080,
-    minHeight:700,
+    minWidth: 1100,
+    minHeight:800,
     show: false,
     icon: __dirname + '/assets/logos/Image Lab.png',
   });

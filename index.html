@@ -20,7 +20,7 @@
   </script>
 
   <link rel="stylesheet" href="./node_modules/@mdi/font/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="./styles/lightMode.css">
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body class="body">
@@ -34,13 +34,19 @@
         <span class="mdi mdi-information" style="font-size:20px; vertical-align:top; color: #bb1010;"></span>
         <span class="mdi mdi-file-plus-outline"></span>
         <span class="mdi mdi-folder-open-outline"></span>
-        <span class="mdi mdi-theme-light-dark"></span>
-        <span class="mdi mdi-replay"
-          style="margin-left: 30%; font-size:30px; color: #bb1010; vertical-align: super;"></span>
-        <span class="mdi mdi-play-circle-outline"
-          style=" margin-left: 5%; font-size:30px; color: #367930; vertical-align: super;"></span>
+        <!-- <span class="mdi mdi-theme-light-dark"></span> -->
+        <span class="toggle"></span>
+        <span class="wave"></span>
+
+
       </td>
-      <td style="text-align: end; vertical-align: top;">
+      <!-- <td style="width: 450px;">
+        <span class="mdi mdi-play-circle-outline"
+          style=" margin-left: 32%; font-size:30px; color: #367930; vertical-align: super;"></span>
+        <span class="mdi mdi-replay"
+          style="margin-left: 50%; font-size:30px; color: #bb1010; vertical-align: super;"></span>
+      </td> -->
+      <td style="text-align: end; vertical-align: top; width: 20px;">
         <span class="mdi mdi-help-circle" style="font-size:20px; color: #bb1010; "></span>
       </td>
     </tr>
@@ -120,8 +126,23 @@
         </div>
       </td>
       <td style="vertical-align: top;">
-        <div class="preview-pane">Preview
-          <hr class="hr">
+
+
+
+        <div class="preview-pane" style="padding-top: 2px;">
+          <table>
+            <tr>
+              <td style="display: flex; flex-direction: row; justify-content: space-around;">
+                <span class="mdi mdi-play-circle-outline"
+                  style=" font-size:30px; color: #367930; vertical-align: super;"></span>
+                <p>Preview</p>
+                <span class="mdi mdi-replay" style="font-size:30px; color: #bb1010; vertical-align: super;"></span>
+              </td>
+            </tr>
+          </table>
+
+
+          <hr class="hr" style="margin-top: 0px;">
         </div>
 
         <div class="properties-pane">
@@ -135,16 +156,11 @@
 
 
 
-  <script src='./ImageLab Blocks.js'></script>
-  <script src="./blocks click functions.js"></script>
-  <script src="./workspace.js"></script>
+  <script src='ImageLab Blocks.js'></script>
+  <script src="blocks click functions.js"></script>
+  <script src="workspace.js"></script>
+  <script src="toggle.js"></script>
 
-  <script>
-    const switchMode = document.querySelector('span');
-    switchMode.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode');
-    })
-  </script>
 
   <input type="file" id="inputImage" name="avatar" accept=".jpg , .png" style="display:none">
   <input style="display:none" id="outputDirectory" type="file" webkitdirectory directory multiple />

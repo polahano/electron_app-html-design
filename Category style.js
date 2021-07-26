@@ -9,7 +9,7 @@
  * @author aschmiedt@google.com (Abby Schmiedt)
  */
 
-class CustomCategory extends Blockly.ToolboxCategory {
+class CategorySelection extends Blockly.ToolboxCategory {
   /**
    * Constructor for a custom category.
    * @override
@@ -24,12 +24,9 @@ class CustomCategory extends Blockly.ToolboxCategory {
    * @override
    */
   addColourBorder_() {
-    if (document.getElementsByTagName('body').backgroundColor == '#e8f2fc') {
-      this.rowDiv_.style.backgroundColor = '#035fbb';
-    } else {
-      this.rowDiv_.style.backgroundColor = '#1f2b4b';
-    }
-    // #1f2b4b for darkmode
+    if (true) {
+      this.rowDiv_.style.backgroundColor = '';
+    } 
   }
 
   /**
@@ -48,11 +45,8 @@ class CustomCategory extends Blockly.ToolboxCategory {
       this.iconDom_.style.color = this.colour_;
     } else {
       // Set the background back to the original colour.
-
-      if (document.getElementsByTagName('body').backgroundColor == '#e8f2fc') {
-        this.rowDiv_.style.backgroundColor = '#035fbb';
-      } else {
-        this.rowDiv_.style.backgroundColor = '#1f2b4b';
+      if (true) {
+        this.rowDiv_.style.backgroundColor = '';
       }
       // Set the text back to white.
       labelDom.style.color = 'white';
@@ -62,10 +56,9 @@ class CustomCategory extends Blockly.ToolboxCategory {
     Blockly.utils.aria.setState(/** @type {!Element} */(this.htmlDiv_),
       Blockly.utils.aria.State.SELECTED, isSelected);
   }
-
 }
 
 Blockly.registry.register(
   Blockly.registry.Type.TOOLBOX_ITEM,
   Blockly.ToolboxCategory.registrationName,
-  CustomCategory, true);
+  CategorySelection, true);
