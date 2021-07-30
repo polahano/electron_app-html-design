@@ -5,11 +5,11 @@ var blocklyDiv = document.getElementById("blocklyDiv");
 var toolbox = document.getElementById("toolbox");
 
 var workspace = Blockly.inject(blocklyDiv, {
-  plugins: {
-    'toolbox': ContinuousToolbox,
-    'flyoutsVerticalToolbox': ContinuousFlyout,
-    'metricsManager': ContinuousMetrics,
-  },
+  // plugins: {
+  //   'toolbox': ContinuousToolbox,
+  //   'flyoutsVerticalToolbox': ContinuousFlyout,
+  //   'metricsManager': ContinuousMetrics,
+  // },
   toolbox: toolbox,
   media: './node_modules/blockly/media/',
   scrollbars: true,

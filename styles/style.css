@@ -84,9 +84,6 @@
    color: var(--thin-lines-color);
  }
 
- p {
-   line-height: 5px;
- }
 
  .blocklyZoom>image,
  .blocklyZoom>svg>image,
@@ -237,4 +234,10 @@
  .wave.active {
    background: #1b2440;
    box-shadow: 0 0 0 9999px #1b2440;
+ }
+
+
+
+ .introjs-tooltiptext {
+   text-align: center;
  }

@@ -14,8 +14,9 @@
   <script src="./node_modules/@blockly/continuous-toolbox/dist/index.js"></script>
   <script src="./node_modules/@blockly/field-slider/dist/index.js"></script>
   <script src="./node_modules/@blockly/plugin-workspace-search/dist/index.js"></script>
+  <script src="./node_modules/intro.js/intro.js"></script>
   <!-- responsible for changing colors of selected category -->
-  <script src="./category-selection-style.js"></script>
+  <script src="category-selection-style.js"></script>
   <!-- color palette -->
   <script>
     Blockly.HSV_SATURATION = 0.8// 0 (inclusive) to 1 (exclusive), defaulting to 0.45
@@ -24,6 +25,9 @@
   <!-- icons library and styles of html elements-->
   <link rel="stylesheet" href="./node_modules/@mdi/font/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./node_modules/intro.js/introjs.css">
+  <link rel="stylesheet" href="./node_modules/intro.js/themes/introjs-modern.css">
+
 </head>
 
 
@@ -121,14 +125,14 @@
         </div>
         <div class="information-pane">
           <p style="font-size: 15px;">Operation name</p>
-          <p style="font-size: 13px;">here is the operation description</p>
+          <p style="font-size: 13px; line-height: 5px;">here is the operation description</p>
         </div>
       </td>
       <td style="vertical-align: top;">
         <div class="preview-pane" style="padding-top: 2px;">
           <table>
             <tr>
-              <td style="display: flex; flex-direction: row; justify-content: space-around;">
+              <td style="display: flex; flex-direction: row; justify-content: space-around; align-items: center;">
                 <span class="mdi mdi-play-circle-outline"
                   style=" font-size:30px; color: #367930; vertical-align: super;"></span>
                 <p>Preview</p>
@@ -139,17 +143,20 @@
           <hr class="hr" style="margin-top: 0px;">
         </div>
         <div class="properties-pane">
-          <p>Preview</p>
+          <p>Properties</p>
           <hr class="hr">
         </div>
       </td>
     </tr>
   </table>
 
+  <script src="guide.js"></script>
   <script src='imagelab-blocks.js'></script>
   <script src="browse-blocks-functions.js"></script>
   <script src="workspace.js"></script>
   <script src="themes-toggle.js"></script>
+
+
 
   <!-- file selector for browse blocks -->
   <input type="file" id="inputImage" name="avatar" accept=".jpg , .png" style="display:none">
