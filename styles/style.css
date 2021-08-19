@@ -8,6 +8,7 @@
    --label-color: white;
    --category-color: #035fbb;
    --wave-color: #1b2440;
+   --focused-titlebar: rgba(0, 0, 0, 0.14);
  }
 
 
@@ -64,14 +65,14 @@
  .information-pane {
    width: auto;
    min-width: 700px;
-   height: 65px;
+   height: auto;
    margin-top: 2px;
    padding-left: 15px;
    padding-top: 3px;
    padding-right: 3px;
    padding-bottom: 3px;
    text-align: left;
-   background-color: mediumseagreen;
+   background-color: #ccc;
    border-radius: 0.5rem;
    font-family: sans-serif;
    font-weight: bold;
@@ -240,4 +241,32 @@
 
  .introjs-tooltiptext {
    text-align: center;
+ }
+
+
+ /* title bar customization*/
+ .titlebar {
+   font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .titlebar.cet-windows,
+ .titlebar.cet-linux,
+ .menubar-menu-container {
+   background-color: var(--toolbox-bg) !important;
+ }
+
+ .action-item {
+   background-color: var(--toolbox-bg) !important;
+ }
+
+ a.action-menu-item {
+   background-color: rgba(0, 0, 0, 0) !important;
+ }
+
+ .action-item.focused {
+   background-color: rgba(255, 255, 255, 0.14) !important;
+ }
+
+ .container-after-titlebar{
+   padding: 6px;
  }

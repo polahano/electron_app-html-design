@@ -4,19 +4,47 @@
 <head>
     <meta charset="utf-8" />
     <style>
+        /* html,
         body {
-            background-color: #ffffff;
+            height: 100%;
+        }
+
+        html {
+            background: transparent;
+            border-radius: 20px;
+        } */
+
+
+        body {
+            background-color: #e8f2fc;
+            /* -moz-border-radius: 20px; */
+        }
+
+        @keyframes color-change {
+            0% {
+                color: rgb(206, 110, 0);
+            }
+
+            50% {
+                color: rgb(62, 62, 146);
+            }
+
+            100% {
+                color: rgb(206, 110, 0);
+            }
         }
     </style>
+    <link rel="stylesheet" href="./node_modules/@mdi/font/css/materialdesignicons.min.css">
 </head>
 
 <body>
     <div id="splash" style="position: absolute; left: 50%; top: 40%; transform: translate(-50%, -40%);">
-        <img src="./assets/logos/Image Lab icon.png" height="150px">
+        <img id="myDiv" src="./assets/logos/Image Lab icon.png" height="150px">
     </div>
     <div id="splash" style="position: absolute; left: 50%; top: 70%; transform: translate(-50%, -40%);">
-        <img src="./assets/splash/Dual Ball.svg" height="50px">
-        <!-- mdi-loading mdi-spin -->
+        <!-- <img src="./assets/splash/Dual Ball.svg" height="50px"> -->
+        <span id="myDiv" class="mdi mdi-loading mdi-spin"
+            style=" font-size: 50px; animation: color-change 1s infinite;"></span>
     </div>
 </body>
 

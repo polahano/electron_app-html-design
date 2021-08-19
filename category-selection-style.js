@@ -43,12 +43,13 @@ class CategorySelection extends Blockly.ToolboxCategory {
       // Set the colour of the text to the colour of the category.
       labelDom.style.color = this.colour_;
       this.iconDom_.style.color = this.colour_;
+      // document.getElementById('information-pane').style.backgroundColor = this.colour_; // that colours the information pane with the color of selected category
     } else {
       // Set the background back to the original colour.
       if (true) {
         this.rowDiv_.style.backgroundColor = '';
       }
-      // Set the text back to white.
+      // Set the text and icon back to white.
       labelDom.style.color = 'white';
       this.iconDom_.style.color = 'white';
     }

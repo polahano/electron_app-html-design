@@ -1,5 +1,5 @@
 document.querySelector('.toggle').addEventListener('click', function () {
-    this.classList.add('animate');
+    // this.classList.add('animate');
 
     setTimeout(() => {
         this.classList.toggle('active');
@@ -7,5 +7,5 @@ document.querySelector('.toggle').addEventListener('click', function () {
         document.documentElement.classList.toggle('dark-mode');
     }, 150);
 
-    setTimeout(() => this.classList.remove('animate'), 300);
+    // setTimeout(() => this.classList.remove('animate'), 300);
 });

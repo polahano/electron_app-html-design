@@ -39,4 +39,17 @@ Blockly.VerticalFlyout.prototype.getFlyoutScale = function () {
 };
 
 
+  workspace.addChangeListener(function(event) {
+    if (event.type == Blockly.Events.SELECTED) {
+      if (Blockly.selected == null) {
+        document.getElementById('information-pane').style.backgroundColor = '#ccc';
+        document.getElementById('information-pane').style.border = "3px solid transparent";
+
+      } else{
+        document.getElementById('information-pane').style.backgroundColor = Blockly.selected.getColour();
+        document.getElementById('information-pane').style.border = "3px solid yellow";
+      }
+    }
+  });
+
 
